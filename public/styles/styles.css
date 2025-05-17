@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --color-barra-lateral: rgb(255, 255, 255);
+    --color-barra-lateral: rgb(252, 252, 252);
 
     --color-texto: rgb(0, 0, 0);
     --color-texto-menu: rgb(134, 136, 144);
@@ -17,7 +17,15 @@
     --color-switch-base: rgb(201, 202, 206);
     --color-switch-circulo: rgb(241, 241, 241);
 
-    --body: rgb(242, 242, 242);
+    --body: rgb(255, 255, 255);
+
+    --sombra: 2px solid #a3a3a3;
+
+    --texto2: rgb(76, 131, 214);
+
+    --efecto-modal: rgba(44, 45, 49, 0.4);
+    --fondo-modal: rgb(255, 255, 255);
+    --cerrar-modal: rgb(255, 52, 52);
 }
 
 .dark-mode {
@@ -38,6 +46,14 @@
     --color-switch-circulo: rgb(255, 255, 255);
 
     --body: rgb(37, 37, 37);
+
+    --sombra: 2px solid #d9d9d9;
+
+    --texto2: rgb(76, 131, 214);
+
+    --efecto-modal: rgba(255, 255, 255, 0.4);
+    --fondo-modal: rgb(44, 45, 49);
+    --cerrar-modal: rgb(255, 52, 52);
 }
 
 * {
@@ -234,21 +250,16 @@ main {
     margin-left: 320px;
     padding: 20px;
     transition: margin-left 0.5s ease;
-}
-
-.section {
-    display: none;
-}
-
-.active {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 
 main.min-main {
     margin-left: 80px;
 }
 
-main #home-section {
+main section {
     width: 100%;
     overflow: hidden;
     display: flex;
@@ -258,16 +269,26 @@ main #home-section {
     gap: 20px;
 }
 
+main #home-section {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
 main #home-section img {
     width: 300px;
     height: 300px;
 }
 
 main #home-section h1 {
-    font-size: 35px;
+    font-size: 30px;
 }
 
-main #home-section p {
+main #home-section span {
     font-size: 20px;
     text-align: center;
 }
@@ -310,12 +331,182 @@ main #home-section .socialmedia .boton:hover {
     width: 200px;
     height: 60px;
     border-radius: 80px;
-    transform: scale(1.05);
 }
 
 main #home-section .socialmedia .boton:hover p {
     display: block;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) ease;
+}
+
+main #serhab-section {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+}
+
+main #serhab-section h1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+main #serhab-section .serhab-contaner {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+main #serhab-section .serhab-contaner span {
+    font-size: 23px;
+    font-weight: 500;
+    font-style: oblique;
+    text-align: justify;
+}
+
+main #serhab-section .serhab-contaner .grid {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    overflow: hidden;
+}
+
+main #serhab-section .serhab-contaner .grid .cont {
+    width: 100%;
+    overflow: hidden;
+}
+
+main #serhab-section .serhab-contaner .grid .card {
+    width: 100%;
+    border: var(--sombra);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 8px;
+    gap: 20px;
+    padding: 20px;
+}
+
+main #serhab-section .serhab-contaner .grid .card:hover {
+    cursor: pointer;
+}
+
+main #serhab-section .serhab-contaner .grid .card ion-icon {
+    font-size: 30px;
+    color: var(--texto2);
+}
+
+main #serhab-section .serhab-contaner .grid .card span {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+main #serhab-section .serhab-contaner .grid .card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    color: var(--texto2);
+    font-size: 20px;
+}
+
+body.bloquear-scroll {
+    overflow: hidden;
+}
+
+main #serhab-section .serhab-contaner .grid .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background-color: var(--efecto-modal);
+    justify-content: center;
+    align-items: center;
+}
+
+main #serhab-section .serhab-contaner .grid .modal.mostrar {
+    display: flex;
+}
+
+main #serhab-section .serhab-contaner .grid .modal-container {
+    width: 50%;
+    background: var(--fondo-modal);
+    color: var(--color-texto);
+    border-radius: 10px;
+    position: relative;
+    pointer-events: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+main #serhab-section .serhab-contaner .grid .modal-container .modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 20px;
+    border-bottom: 2px solid var(--color-linea);
+}
+
+main #serhab-section .serhab-contaner .grid .modal-container .modal-header .sep {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+main #serhab-section .serhab-contaner .grid .modal-container .modal-header .sep ion-icon {
+    color: var(--texto2);
+    font-size: 20px;
+}
+
+main #serhab-section .serhab-contaner .grid .modal-container .modal-header .sep h1 {
+    font-size: 25px;
+}
+
+main #serhab-section .serhab-contaner .grid .modal-container .modal-header .cerrar {
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--cerrar-modal);
+}
+
+main #serhab-section .serhab-contaner .grid .modal-container .modal-body {
+    padding: 20px;
+}
+
+main #serhab-section .serhab-contaner .grid .modal-container .modal-body ul {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+main #serhab-section .serhab-contaner .grid .modal-container .modal-body ul li {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+main #serhab-section .serhab-contaner .grid .modal-container .modal-body ul li ion-icon {
+    color: var(--texto2);
+    font-size: 20px;
+}
+
+main #serhab-section .serhab-contaner .grid .modal-container .modal-body ul li span {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: left;
 }
 
 @media (min-height: 660px) {
@@ -352,5 +543,240 @@ main #home-section .socialmedia .boton:hover p {
 
     main.min-main {
         margin-left: 0;
+    }
+
+    main #home-section {
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    main #home-section img {
+        width: 200px;
+        height: 200px;
+    }
+
+    main #home-section h1 {
+        font-size: 30px;
+    }
+
+    main #home-section span {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    main #home-section .socialmedia {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    main #home-section .socialmedia .boton {
+        background-color: var(--color-boton);
+        color: var(--color-boton-texto);
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        height: 60px;
+        width: 100%;
+        border-radius: 80px;
+        transition: all 0.5s ease;
+        /* Transición suave */
+    }
+
+    main #home-section .socialmedia .boton p {
+        font-size: 20px;
+        font-weight: 600;
+        display: block;
+    }
+
+    main #home-section .socialmedia .boton ion-icon {
+        font-size: 20px;
+    }
+
+    main #home-section .socialmedia .boton:hover {
+        height: 60px;
+        width: 100%;
+        border-radius: 80px;
+    }
+
+    main #serhab-section {
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        text-align: center;
+    }
+
+    main #serhab-section h1 {
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    main #serhab-section .serhab-contaner {
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    main #serhab-section .serhab-contaner span {
+        font-size: 23px;
+        font-weight: 500;
+        font-style: oblique;
+        text-align: justify;
+    }
+
+    main #serhab-section .serhab-contaner .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* 2 columnas iguales */
+        gap: 30px;
+        /* Espacio opcional entre los elementos */
+        width: 100%;
+    }
+
+    main #serhab-section .serhab-contaner .grid .cont {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    main #serhab-section .serhab-contaner .grid .card {
+        width: 100%;
+        border: var(--sombra);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        overflow: hidden;
+        border-radius: 8px;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    main #serhab-section .serhab-contaner .grid .card:hover {
+        cursor: pointer;
+    }
+
+    main #serhab-section .serhab-contaner .grid .card ion-icon {
+        font-size: 30px;
+        color: var(--texto2);
+    }
+
+    main #serhab-section .serhab-contaner .grid .card span {
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    main #serhab-section .serhab-contaner .grid .card {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        text-decoration: none;
+        color: var(--texto2);
+        font-size: 20px;
+    }
+
+    body.bloquear-scroll {
+        overflow: hidden;
+    }
+
+    main #serhab-section .serhab-contaner .grid .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        width: 100%;
+        height: 100%;
+        background-color: var(--efecto-modal);
+        justify-content: center;
+        align-items: center;
+    }
+
+    main #serhab-section .serhab-contaner .grid .modal.mostrar {
+        display: flex;
+    }
+
+    main #serhab-section .serhab-contaner .grid .modal-container {
+        width: 95%;
+        background: var(--fondo-modal);
+        color: var(--color-texto);
+        border-radius: 10px;
+        position: relative;
+        pointer-events: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    main #serhab-section .serhab-contaner .grid .modal-container .modal-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 10px;
+        border-bottom: 2px solid var(--color-linea);
+    }
+
+    main #serhab-section .serhab-contaner .grid .modal-container .modal-header .sep {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    main #serhab-section .serhab-contaner .grid .modal-container .modal-header .sep ion-icon {
+        color: var(--texto2);
+        font-size: 15px;
+    }
+
+    main #serhab-section .serhab-contaner .grid .modal-container .modal-header .sep h1 {
+        font-size: 20px;
+    }
+
+    main #serhab-section .serhab-contaner .grid .modal-container .modal-header .cerrar {
+        font-size: 25px;
+        cursor: pointer;
+        color: var(--cerrar-modal);
+    }
+
+    main #serhab-section .serhab-contaner .grid .modal-container .modal-body {
+        padding: 10px;
+    }
+
+    main #serhab-section .serhab-contaner .grid .modal-container .modal-body ul {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    main #serhab-section .serhab-contaner .grid .modal-container .modal-body ul li {
+        width: 100%;
+        list-style: circle;
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        font-size: 15px;
+    }
+
+    main #serhab-section .serhab-contaner .grid .modal-container .modal-body ul li ion-icon {
+        color: var(--texto2);
+    }
+
+    main #serhab-section .serhab-contaner .grid .modal-container .modal-body ul li span {
+        font-size: 18px;
+        font-weight: 500;
+        text-align: left;
     }
 }
