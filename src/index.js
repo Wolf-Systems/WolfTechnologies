@@ -1,3 +1,7 @@
+// src/index.js
+import './styles.css';
+
+
 const cloud = document.getElementById("cloud");
 const barraLateral = document.querySelector(".barra-lateral");
 const spans = document.querySelectorAll("span");
@@ -71,36 +75,40 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-// Función para mostrar la sección activa
-function showSection(section) {
-    // Ocultamos todas las secciones
-    const sections = document.querySelectorAll('.section');
-    sections.forEach(sec => sec.classList.remove('active'));
 
-    // Mostramos la sección seleccionada
-    const selectedSection = document.getElementById(section);
-    selectedSection.classList.add('active');
+// // Función para mostrar la sección activa
+// function showSection(section) {
+//     // Ocultamos todas las secciones
+//     const sections = document.querySelectorAll('.section');
+//     sections.forEach(sec => sec.classList.remove('active'));
 
-    // Guardamos la sección activa en localStorage para persistencia
-    localStorage.setItem('activeSection', section);
-}
+//     // Mostramos la sección seleccionada
+//     const selectedSection = document.getElementById(section);
+//     selectedSection.classList.add('active');
 
-// Función para mostrar la sección activa
-function showSection(section) {
-    // Ocultamos todas las secciones
-    const sections = document.querySelectorAll('.section');
-    sections.forEach(sec => sec.classList.remove('active'));
-
-    // Mostramos la sección seleccionada
-    const selectedSection = document.getElementById(section);
-    selectedSection.classList.add('active');
-
-    // Guardamos la sección activa en localStorage para persistencia
-    localStorage.setItem('activeSection', section);
-}
+//     // Guardamos la sección activa en localStorage para persistencia
+//     localStorage.setItem('activeSection', section);
+// }
 
 // Al cargar la página, verificar si hay una sección activa en el localStorage
 window.onload = function () {
+
+
+
+    // Función para mostrar la sección activa
+    function showSection(section) {
+        // Ocultamos todas las secciones
+        const sections = document.querySelectorAll('.section');
+        sections.forEach(sec => sec.classList.remove('active'));
+
+        // Mostramos la sección seleccionada
+        const selectedSection = document.getElementById(section);
+        selectedSection.classList.add('active');
+
+        // Guardamos la sección activa en localStorage para persistencia
+        localStorage.setItem('activeSection', section);
+    }
+
     const activeSection = localStorage.getItem('activeSection') || 'home-section';
     showSection(activeSection);
 
@@ -111,6 +119,8 @@ window.onload = function () {
             link.classList.add("active");
         }
     });
+
+
 };
 
 document.addEventListener("DOMContentLoaded", function () {
