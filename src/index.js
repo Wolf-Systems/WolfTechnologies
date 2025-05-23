@@ -10,6 +10,7 @@ const circulo = document.querySelector(".circulo");
 const menu = document.querySelector(".menu");
 const main = document.querySelector("main");
 
+
 menu.addEventListener("click", () => {
     barraLateral.classList.toggle("max-barra-lateral");
     if (barraLateral.classList.contains("max-barra-lateral")) {
@@ -90,24 +91,27 @@ window.addEventListener("DOMContentLoaded", () => {
 //     localStorage.setItem('activeSection', section);
 // }
 
+
+// Función para mostrar la sección activa
+function showSection(section) {
+    // Ocultamos todas las secciones
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(sec => sec.classList.remove('active'));
+
+    // Mostramos la sección seleccionada
+    const selectedSection = document.getElementById(section);
+    selectedSection.classList.add('active');
+
+    // Guardamos la sección activa en localStorage para persistencia
+    localStorage.setItem('activeSection', section);
+}
+
+// ✅ Esto la hace accesible desde el HTML
+window.showSection = showSection;
+
+
 // Al cargar la página, verificar si hay una sección activa en el localStorage
 window.onload = function () {
-
-
-
-    // Función para mostrar la sección activa
-    function showSection(section) {
-        // Ocultamos todas las secciones
-        const sections = document.querySelectorAll('.section');
-        sections.forEach(sec => sec.classList.remove('active'));
-
-        // Mostramos la sección seleccionada
-        const selectedSection = document.getElementById(section);
-        selectedSection.classList.add('active');
-
-        // Guardamos la sección activa en localStorage para persistencia
-        localStorage.setItem('activeSection', section);
-    }
 
     const activeSection = localStorage.getItem('activeSection') || 'home-section';
     showSection(activeSection);
