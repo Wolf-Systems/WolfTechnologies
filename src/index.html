@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wolf Technologies</title>
+    <link rel="shortcut icon" href="././resources/Icono.png" type="image/x-icon">
+
+    <!-- <link rel="stylesheet" href="./styles.css"> -->
+</head>
+
+<body>
+    <div class="menu">
+        <ion-icon name="grid-outline"></ion-icon>
+
+        <ion-icon name="close-outline"></ion-icon>
+    </div>
+
+    <div class="barra-lateral">
+        <div class="nombre">
+            <img src="./resources/Icono.png" alt="" id="cloud">
+            <span>Wolf Technologies</span>
+        </div>
+
+        <nav class="navegacion">
+            <ul>
+                <li>
+                    <a href="#home-section" onclick="showSection('home-section')">
+                        <ion-icon name="home-outline"></ion-icon>
+                        <span>Inicio</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#services-section" onclick="showSection('services-section')">
+                        <ion-icon name="star-outline"></ion-icon>
+                        <span>Servicios</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#habilities-section" onclick="showSection('habilities-section')">
+                        <ion-icon name="star-outline"></ion-icon>
+                        <span>Habilidades</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#portfolio-section" onclick="showSection('portfolio-section')">
+                        <ion-icon name="star-outline"></ion-icon>
+                        <span>Portafolio</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#about-section" onclick="showSection('about-section')">
+                        <ion-icon name="book-outline"></ion-icon>
+                        <span>Sobre nosotros</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div>
+            <div class="linea"></div>
+
+            <div class="modo-obscuro">
+                <div class="info">
+                    <ion-icon name="moon-outline"></ion-icon>
+                    <span>Dark mode</span>
+                </div>
+
+                <div class="switch">
+                    <div class="base">
+                        <div class="circulo"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section class="section" id="home-section">
+            <img src="./resources/Logo.png" alt="">
+
+            <h1>¡Bienvenido!</h1>
+
+            <p>
+                Creamos soluciones digitales a la medida de tus ideas. Partimos de propuestas representadas en
+                prototipos funcionales, buscando capturar y reflejar fielmente los requerimientos que nos compartes.
+                Desarrollamos desde aplicaciones móviles hasta sistemas web completos, fusionando diseño UI/UX con
+                tecnología para ofrecerte productos modernos, eficientes y visualmente atractivos. Descubre cómo podemos
+                ayudarte a llevar tu proyecto al siguiente nivel.
+            </p>
+
+            <div class="socialmedia">
+                <a href="#" class="boton">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                    <p>Linkedin</p>
+                </a>
+
+                <a href="#" class="boton">
+                    <ion-icon name="logo-github"></ion-icon>
+                    <p>GitHub</p>
+                </a>
+
+                <a href="#" class="boton">
+                    <ion-icon name="logo-youtube"></ion-icon>
+                    <p>YouTube</p>
+                </a>
+            </div>
+        </section>
+
+        <section class="section" id="services-section">
+            <div class="titulo">
+                <h1>Servicios</h1>
+                <span>¿Qué te ofrecemos?</span>
+            </div>
+
+            <div class="grid">
+                <div class="card">
+                    <i class="fa-brands fa-figma"></i>
+                    <span>Diseño Ui/Ux</span>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <div class="card">
+                    <i class="fa fa-code"></i>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-user-secret"></i>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="habilities-section">
+            <div class="titulo">
+                <h1>Servicios</h1>
+                <span>¿Qué te ofrecemos?</span>
+            </div>
+
+            <div class="grid">
+                <div class="card">
+                    <i class="fa-brands fa-figma"></i>
+                    <span>Diseño Ui/Ux</span>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <div class="card">
+                    <i class="fa fa-code"></i>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-user-secret"></i>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="portfolio-section">
+        </section>
+
+        <section class="section" id="about-section">
+        </section>
+    </main>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- <script src="./index.js"></script> -->
+</body>
+
+</html>
