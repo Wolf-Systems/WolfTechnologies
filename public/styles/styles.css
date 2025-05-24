@@ -439,7 +439,7 @@ main #serhab-section .serhab-contaner .grid .modal.mostrar {
 }
 
 main #serhab-section .serhab-contaner .grid .modal-container {
-    width: 50%;
+    width: 80%;
     background: var(--fondo-modal);
     color: var(--color-texto);
     border-radius: 10px;
@@ -466,7 +466,7 @@ main #serhab-section .serhab-contaner .grid .modal-container .modal-header .sep 
 
 main #serhab-section .serhab-contaner .grid .modal-container .modal-header .sep ion-icon {
     color: var(--texto2);
-    font-size: 20px;
+    font-size: 25px;
 }
 
 main #serhab-section .serhab-contaner .grid .modal-container .modal-header .sep h1 {
@@ -483,29 +483,30 @@ main #serhab-section .serhab-contaner .grid .modal-container .modal-body {
     padding: 20px;
 }
 
-main #serhab-section .serhab-contaner .grid .modal-container .modal-body ul {
+main #serhab-section .serhab-contaner .grid .modal-container .modal-body .lista-padre {
+    width: 100%;
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     gap: 15px;
 }
 
-main #serhab-section .serhab-contaner .grid .modal-container .modal-body ul li {
-    width: 100%;
-    list-style: none;
+main #serhab-section .serhab-contaner .grid .modal-container .modal-body .lista-hijo {
     display: flex;
     gap: 10px;
     align-items: center;
 }
 
-main #serhab-section .serhab-contaner .grid .modal-container .modal-body ul li ion-icon {
-    color: var(--texto2);
+main #serhab-section .serhab-contaner .grid .modal-container .modal-body .lista-hijo ion-icon {
     font-size: 20px;
+    color: var(--texto2);
 }
 
-main #serhab-section .serhab-contaner .grid .modal-container .modal-body ul li span {
+main #serhab-section .serhab-contaner .grid .modal-container .modal-body .lista-hijo span {
     font-size: 20px;
-    font-weight: 500;
+    font-style: normal;
     text-align: left;
 }
 
@@ -752,31 +753,5 @@ main #serhab-section .serhab-contaner .grid .modal-container .modal-body ul li s
 
     main #serhab-section .serhab-contaner .grid .modal-container .modal-body {
         padding: 10px;
-    }
-
-    main #serhab-section .serhab-contaner .grid .modal-container .modal-body ul {
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    main #serhab-section .serhab-contaner .grid .modal-container .modal-body ul li {
-        width: 100%;
-        list-style: circle;
-        display: flex;
-        gap: 5px;
-        align-items: center;
-        font-size: 15px;
-    }
-
-    main #serhab-section .serhab-contaner .grid .modal-container .modal-body ul li ion-icon {
-        color: var(--texto2);
-    }
-
-    main #serhab-section .serhab-contaner .grid .modal-container .modal-body ul li span {
-        font-size: 18px;
-        font-weight: 500;
-        text-align: left;
     }
 }
