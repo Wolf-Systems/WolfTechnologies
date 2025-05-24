@@ -1,3 +1,6 @@
+import './page/servicios/servicios'
+import './styles.css'
+
 const cloud = document.getElementById("cloud");
 const barraLateral = document.querySelector(".barra-lateral");
 const spans = document.querySelectorAll("span");
