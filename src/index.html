@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wolf Technologies</title>
+    <link rel="shortcut icon" href="resources/Icono.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <div class="menu">
+        <ion-icon name="grid-outline"></ion-icon>
+
+        <ion-icon name="close-outline"></ion-icon>
+    </div>
+
+    <div class="barra-lateral">
+        <div class="nombre">
+            <img src="resources/Icono.png" alt="" id="cloud">
+            <span>Wolf Technologies</span>
+        </div>
+
+        <nav class="navegacion">
+            <ul>
+                <li>
+                    <a href="#home-section">
+                        <ion-icon name="home-outline"></ion-icon>
+                        <span>Inicio</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#serhab-section">
+                        <ion-icon name="star-outline"></ion-icon>
+                        <span>Servicios y habilidades</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#portfolio-section">
+                        <ion-icon name="star-outline"></ion-icon>
+                        <span>Portafolio</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#about-section">
+                        <ion-icon name="book-outline"></ion-icon>
+                        <span>Sobre nosotros</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div>
+            <div class="linea"></div>
+
+            <div class="modo-obscuro">
+                <div class="info">
+                    <ion-icon name="moon-outline"></ion-icon>
+                    <span>Dark mode</span>
+                </div>
+
+                <div class="switch">
+                    <div class="base">
+                        <div class="circulo"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section id="home-section">
+            <img src="resources/Logo.png" alt="">
+
+            <h1>¡Bienvenido!</h1>
+
+            <span>
+                <b>
+                    Creamos soluciones digitales personalizadas que dan vida a tus ideas.
+                </b>
+                <br>
+                <br>
+                Desde el primer contacto, trabajamos en entender a fondo tus necesidades para transformarlas en
+                propuestas claras, representadas mediante prototipos funcionales que permiten visualizar y validar el
+                rumbo del proyecto desde etapas tempranas. Nos especializamos en el desarrollo de aplicaciones móviles,
+                plataformas web y sistemas a medida, integrando diseño UI/UX centrado en el usuario con tecnologías
+                modernas y escalables.
+
+                <br>
+                <br>
+
+                Nuestro enfoque combina creatividad, experiencia y eficiencia para ofrecer productos digitales
+                intuitivos, visualmente atractivos y alineados con tus objetivos. Descubre cómo podemos convertir tu
+                visión en una experiencia digital de alto impacto.
+            </span>
+
+            <div class="socialmedia">
+                <a href="#" class="boton">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                    <p>Linkedin</p>
+                </a>
+
+                <a href="#" class="boton">
+                    <ion-icon name="logo-github"></ion-icon>
+                    <p>GitHub</p>
+                </a>
+
+                <a href="#" class="boton">
+                    <ion-icon name="logo-youtube"></ion-icon>
+                    <p>YouTube</p>
+                </a>
+            </div>
+        </section>
+
+        <section id="serhab-section">
+            <h1>Servicios y habilidades</h1>
+
+            <div class="serhab-contaner">
+                <span>Servicios que ofrecemos</span>
+                <div class="grid">
+                    <div class="cont">
+                        <!-- Div que abre el modal -->
+                        <div class="card" id="abrir-modal">
+                            <ion-icon name="logo-figma"></ion-icon>
+
+                            <span>Diseño Ui/Ux</span>
+                        </div>
+
+                        <!-- Modal de servicios -->
+                        <div id="modal-servicios" class="modal">
+                            <div class="modal-container">
+                                <div class="modal-header">
+                                    <div class="sep">
+                                        <ion-icon name="logo-figma"></ion-icon>
+                                        <h1>Diseño Ui/Ux</h1>
+                                    </div>
+
+                                    <ion-icon class="cerrar" id="cerrar-modal" name="close-circle-outline"></ion-icon>
+                                </div>
+
+                                <div class="modal-body">
+                                    <ul>
+                                        <li>
+                                            <ion-icon name="checkmark-circle"></ion-icon>
+
+                                            <span>
+                                                Creación de wireframes y prototipos interactivos
+                                            </span>
+                                        </li>
+
+                                        <li>
+                                            <ion-icon name="checkmark-circle"></ion-icon>
+
+                                            <span>
+                                                Investigación de usuarios y pruebas de usabilidad.
+                                            </span>
+                                        </li>
+
+                                        <li>
+                                            <ion-icon name="checkmark-circle"></ion-icon>
+
+                                            <span>
+                                                Diseño de flujos de usuario (user flows).
+                                            </span>
+                                        </li>
+
+                                        <li>
+                                            <ion-icon name="checkmark-circle"></ion-icon>
+
+                                            <span>
+                                                Desarrollo de sistemas de diseño y guías de estilo
+                                            </span>
+                                        </li>
+
+                                        <li>
+                                            <ion-icon name="checkmark-circle"></ion-icon>
+
+                                            <span>
+                                                Optimización de la interacción y accesibilidad.
+                                            </span>
+                                        </li>
+
+                                        <li>
+                                            <ion-icon name="checkmark-circle"></ion-icon>
+
+                                            <span>
+                                                Análisis de datos de comportamiento del usuario.
+                                            </span>
+                                        </li>
+
+                                        <li>
+                                            <ion-icon name="checkmark-circle"></ion-icon>
+
+                                            <span>
+                                                Diseño de interfaces visuales para aplicaciones móviles y web.
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cont">
+                        <!-- Div que abre el modal -->
+                        <div class="card">
+                            <ion-icon name="globe-outline"></ion-icon>
+
+                            <span>Desarollo web</span>
+                        </div>
+                    </div>
+
+                    <div class="cont">
+                        <!-- Div que abre el modal -->
+                        <div class="card">
+                            <ion-icon name="phone-portrait-outline"></ion-icon>
+
+                            <span>Desarrollo móvil</span>
+                        </div>
+                    </div>
+
+                    <div class="cont">
+                        <!-- Div que abre el modal -->
+                        <div class="card">
+                            <ion-icon name="lock-closed-outline"></ion-icon>
+
+                            <span>Seguridad</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="serhab-contaner">
+                <span>Nuestras habilidades</span>
+            </div>
+        </section>
+
+        <section id="portfolio-section">
+        </section>
+
+        <section id="about-section">
+        </section>
+    </main>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
