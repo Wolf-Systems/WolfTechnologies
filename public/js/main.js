@@ -5,9 +5,18 @@ const palanca = document.querySelector(".switch");
 const circulo = document.querySelector(".circulo");
 const menu = document.querySelector(".menu");
 const main = document.querySelector("main");
-const modal = document.getElementById("modal-servicios");
-const abrir = document.getElementById("abrir-modal");
+
+const modal = document.getElementById("modal-1");
+const abrir = document.getElementById("abrir-modal-1");
 const cerrar = document.getElementById("cerrar-modal");
+
+const modal2 = document.getElementById("modal-2");
+const abrir2 = document.getElementById("abrir-modal-2");
+const cerrar2 = document.getElementById("cerrar-modal2");
+
+const modal3 = document.getElementById("modal-3");
+const abrir3 = document.getElementById("abrir-modal-3");
+const cerrar3 = document.getElementById("cerrar-modal3");
 
 menu.addEventListener("click", () => {
     barraLateral.classList.toggle("max-barra-lateral");
@@ -74,29 +83,93 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+
+//MODAL 1
+
 // Función para abrir
-function abrirModal() {
+function Abrir_Modal_1() {
     modal.classList.add("mostrar");
     document.body.classList.add("bloquear-scroll");
     localStorage.setItem("modalAbierto", "true");
+    localStorage.setItem("modalAbiertoID", "modal-1");
 }
 
 // Función para cerrar
-function cerrarModal() {
+function Cerrar_Modal_1() {
     modal.classList.remove("mostrar");
     document.body.classList.remove("bloquear-scroll");
     localStorage.setItem("modalAbierto", "false");
+    localStorage.removeItem("modalAbiertoID");
 }
 
 // Abrir modal
-abrir.addEventListener("click", abrirModal);
+abrir.addEventListener("click", Abrir_Modal_1);
 
 // Cerrar modal
-cerrar.addEventListener("click", cerrarModal);
+cerrar.addEventListener("click", Cerrar_Modal_1);
 
-// Mantener estado al recargar
+
+//MODAL 2
+
+// Función para abrir
+function Abrir_Modal_2() {
+    modal2.classList.add("mostrar");
+    document.body.classList.add("bloquear-scroll");
+    localStorage.setItem("modalAbierto", "true");
+    localStorage.setItem("modalAbiertoID", "modal-2");
+}
+
+// Función para cerrar
+function Cerrar_Modal_2() {
+    modal2.classList.remove("mostrar");
+    document.body.classList.remove("bloquear-scroll");
+    localStorage.setItem("modalAbierto", "false");
+    localStorage.removeItem("modalAbiertoID");
+}
+
+// Abrir modal
+abrir2.addEventListener("click", Abrir_Modal_2);
+
+// Cerrar modal
+cerrar2.addEventListener("click", Cerrar_Modal_2);
+
+
+//MODAL 3
+
+// Función para abrir
+function Abrir_Modal_3() {
+    modal3.classList.add("mostrar");
+    document.body.classList.add("bloquear-scroll");
+    localStorage.setItem("modalAbierto", "true");
+    localStorage.setItem("modalAbiertoID", "modal-3");
+}
+
+// Función para cerrar
+function Cerrar_Modal_3() {
+    modal3.classList.remove("mostrar");
+    document.body.classList.remove("bloquear-scroll");
+    localStorage.setItem("modalAbierto", "false");
+    localStorage.removeItem("modalAbiertoID");
+}
+
+// Abrir modal
+abrir3.addEventListener("click", Abrir_Modal_3);
+
+// Cerrar modal
+cerrar3.addEventListener("click", Cerrar_Modal_3);
+
+// Restaurar modal abierto tras recarga
 window.addEventListener("DOMContentLoaded", () => {
-    if (localStorage.getItem("modalAbierto") === "true") {
-        abrirModal();
+    const modalAbierto = localStorage.getItem("modalAbiertoID");
+
+    if (modalAbierto === "modal-1") {
+        modal.classList.add("mostrar");
+        document.body.classList.add("bloquear-scroll");
+    } else if (modalAbierto === "modal-2") {
+        modal2.classList.add("mostrar");
+        document.body.classList.add("bloquear-scroll");
+    } else if (modalAbierto === "modal-3") {
+        modal3.classList.add("mostrar");
+        document.body.classList.add("bloquear-scroll");
     }
 });
